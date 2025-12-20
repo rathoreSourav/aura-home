@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Grid3X3, MessageCircle, Bell, Settings } from 'lucide-react';
+import { Home, Grid3X3, MessageCircle, Bell, Zap } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface AppShellProps {
@@ -12,8 +12,8 @@ const tabs = [
   { id: 'home', icon: Home, label: 'Home' },
   { id: 'devices', icon: Grid3X3, label: 'Devices' },
   { id: 'assistant', icon: MessageCircle, label: 'Assistant' },
+  { id: 'automations', icon: Zap, label: 'Automations' },
   { id: 'alerts', icon: Bell, label: 'Alerts' },
-  { id: 'settings', icon: Settings, label: 'Settings' },
 ];
 
 export function AppShell({ children, activeTab, onTabChange }: AppShellProps) {
