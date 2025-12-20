@@ -9,12 +9,13 @@ import { ThermostatControl } from '@/components/devices/ThermostatControl';
 import { CameraView } from '@/components/devices/CameraView';
 import { ChatInterface } from '@/components/assistant/ChatInterface';
 import { AlertsPanel } from '@/components/alerts/AlertsPanel';
-import { SettingsPanel } from '@/components/settings/SettingsPanel';
+import { AutomationsPanel } from '@/components/automations/AutomationsPanel';
 import { useDevices, Device } from '@/hooks/useDevices';
 import { useAlerts } from '@/hooks/useAlerts';
 import { useChat } from '@/hooks/useChat';
+import { useRoutines } from '@/hooks/useRoutines';
 
-type TabType = 'home' | 'devices' | 'assistant' | 'alerts' | 'settings';
+type TabType = 'home' | 'devices' | 'assistant' | 'automations' | 'alerts';
 type ControlPanel = 'light' | 'thermostat' | 'camera' | null;
 
 export default function Index() {
@@ -26,6 +27,7 @@ export default function Index() {
   const { devices, toggleDevice, updateDevice } = useDevices();
   const { alerts, dismissAlert, markAsRead } = useAlerts();
   const { messages, isLoading, sendMessage } = useChat();
+  const { routines, toggleRoutine, runRoutine, addRoutine, updateRoutine, deleteRoutine } = useRoutines();
 
   const handleDeviceClick = (device: Device) => {
     setSelectedDevice(device);
@@ -101,6 +103,18 @@ export default function Index() {
           />
         );
       
+      case 'automations':
+        return (
+          <AutomationsPanel
+            routines={routines}
+            onToggle={toggleRoutine}
+            onRun={runRoutine}
+            onAdd={addRoutine}
+            onUpdate={updateRoutine}
+            onDelete={deleteRoutine}
+          />
+        );
+      
       case 'alerts':
         return (
           <AlertsPanel
@@ -110,9 +124,6 @@ export default function Index() {
             onViewCamera={handleViewCamera}
           />
         );
-      
-      case 'settings':
-        return <SettingsPanel />;
       
       default:
         return null;
