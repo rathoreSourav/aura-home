@@ -1,0 +1,38 @@
+{
+  "name": "aura-home-mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-navigation/bottom-tabs": "^7.0.0",
+    "@react-navigation/native": "^7.0.0",
+    "@react-navigation/native-stack": "^7.0.0",
+    "expo": "^52.0.0",
+    "expo-constants": "^17.0.2",
+    "expo-status-bar": "^2.0.0",
+    "lucide-react-native": "^0.462.0",
+    "react": "18.3.1",
+    "react-native": "0.76.1",
+    "react-native-gesture-handler": "~2.20.0",
+    "react-native-reanimated": "~3.16.1",
+    "react-native-safe-area-context": "4.12.0",
+    "react-native-screens": "~4.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@types/react": "~18.3.12",
+    "@types/react-native": "~0.76.0",
+    "eslint": "^9.32.0",
+    "typescript": "~5.6.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
