@@ -1,13 +1,13 @@
 export const theme = {
   colors: {
-    background: "#0B0B0F",
-    surface: "#121218",
-    card: "#181822",
-    primary: "#9BD2FF",
-    accent: "#FFC15E",
-    text: "#F4F6FB",
-    muted: "#8B8CA3",
-    border: "rgba(255,255,255,0.06)",
+    background: "#F6F7FB",
+    surface: "#FFFFFF",
+    card: "#F1F4F9",
+    primary: "#FF8A3D",
+    accent: "#6C8EF6",
+    text: "#111827",
+    muted: "#6B7280",
+    border: "#E5E7EB",
   },
   spacing: {
     xs: 8,
@@ -17,8 +17,8 @@ export const theme = {
     xl: 32,
   },
   radius: {
-    sm: 10,
-    md: 16,
-    lg: 22,
+    sm: 12,
+    md: 18,
+    lg: 26,
   },
 };
