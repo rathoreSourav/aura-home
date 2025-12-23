@@ -60,7 +60,7 @@ function TabNavigator() {
         name="ScenesTab"
         component={ScenesScreen}
         options={{
-          title: "Scenes",
+          title: "Automations",
           tabBarIcon: ({ color, size }) => (
             <TabBarIcon name="layers" color={color} size={size} />
           ),
@@ -93,7 +93,7 @@ function TabNavigator() {
 export default function App() {
   return (
     <NavigationContainer theme={navTheme}>
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Root" component={TabNavigator} />
       </Stack.Navigator>
