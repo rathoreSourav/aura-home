@@ -6,8 +6,8 @@ import { StatusBar } from "expo-status-bar";
 import { HomeScreen } from "./screens/HomeScreen";
 import { DevicesScreen } from "./screens/DevicesScreen";
 import { ScenesScreen } from "./screens/ScenesScreen";
-import { VideoScreen } from "./screens/VideoScreen";
 import { AssistantScreen } from "./screens/AssistantScreen";
+import { ProfileScreen } from "./screens/ProfileScreen";
 import { theme } from "./design/theme";
 import { TabBarIcon } from "./components/TabBarIcon";
 
@@ -60,29 +60,29 @@ function TabNavigator() {
         name="ScenesTab"
         component={ScenesScreen}
         options={{
-          title: "Scenes",
+          title: "Automations",
           tabBarIcon: ({ color, size }) => (
-            <TabBarIcon name="layers" color={color} size={size} />
+            <TabBarIcon name="zap" color={color} size={size} />
           ),
         }}
       />
       <Tab.Screen
-        name="VideoTab"
-        component={VideoScreen}
-        options={{
-          title: "Video",
-          tabBarIcon: ({ color, size }) => (
-            <TabBarIcon name="video" color={color} size={size} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="AssistantTab"
+        name="AiTab"
         component={AssistantScreen}
         options={{
-          title: "Assistant",
+          title: "AI",
           tabBarIcon: ({ color, size }) => (
-            <TabBarIcon name="message-circle" color={color} size={size} />
+            <TabBarIcon name="sparkles" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="ProfileTab"
+        component={ProfileScreen}
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color, size }) => (
+            <TabBarIcon name="user" color={color} size={size} />
           ),
         }}
       />
@@ -93,7 +93,7 @@ function TabNavigator() {
 export default function App() {
   return (
     <NavigationContainer theme={navTheme}>
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Root" component={TabNavigator} />
       </Stack.Navigator>

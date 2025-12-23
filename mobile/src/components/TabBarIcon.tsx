@@ -1,16 +1,16 @@
 import React from "react";
 import { View } from "react-native";
-import { LucideIcon, Home, Lightbulb, Layers, Video, MessageCircle } from "lucide-react-native";
+import { LucideIcon, Home, Lightbulb, Zap, Sparkles, User } from "lucide-react-native";
 import { theme } from "../design/theme";
 
-type IconName = "home" | "lightbulb" | "layers" | "video" | "message-circle";
+type IconName = "home" | "lightbulb" | "zap" | "sparkles" | "user";
 
 const iconMap: Record<IconName, LucideIcon> = {
   home: Home,
   lightbulb: Lightbulb,
-  layers: Layers,
-  video: Video,
-  "message-circle": MessageCircle,
+  zap: Zap,
+  sparkles: Sparkles,
+  user: User,
 };
 
 type Props = {
